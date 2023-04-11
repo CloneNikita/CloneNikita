@@ -79,7 +79,8 @@ entity.Debug.OnLookAtEntity = function(entityTable)
 end
 
 entity.Debug.OnDeath = function(entityTable)
-    warn("Player has died.")
+    wait(1.2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to Rush...", "Pay Attention to any cues that might hint at this arrival."}, "Blue")
 end
 ------------------------
 
