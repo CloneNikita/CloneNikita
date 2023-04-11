@@ -22,7 +22,7 @@ local entity = Creator.createEntity({
         WaitTime = 2,
     },
     CamShake = {
-        false, -- Enabled/Disabled
+        true, -- Enabled/Disabled
         {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
         100, -- Shake start distance (from Entity to you)
     },
