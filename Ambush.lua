@@ -80,7 +80,7 @@ end
 
 entity.Debug.OnDeath = function(entityTable)
     wait(1.2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to Ambush...", "You needed get out of closet.", "If Ambush is close just hide quickly."}, "Blue")
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to who call Ambush...", "It is a tricky one.", "Use what you have learned from Rush!"}, "Blue")
 end
 ------------------------
 
