@@ -50,7 +50,6 @@ repeat
 wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
 until
-end
  end
 end 
 end
