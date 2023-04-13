@@ -7,7 +7,7 @@ function notif(title,desc, rea)
         Image = "https://cdn.britannica.com/43/172743-138-545C299D/overview-Barack-Obama.jpg?w=800&h=450&c=crop"
     })
 end
-
+notif("Script working", "wow trolled by devs","LMAO")
 game.Workspace.CurrentRooms.ChildAdded:Connect(function()
 if game.Workspace.Ambience_Seek.Playing == false then
   local eyes = math.random(1,2)
