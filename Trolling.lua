@@ -1,8 +1,4 @@
-
-        Reason = rea,
-        Image = "https://cdn.britannica.com/43/172743-138-545C299D/overview-Barack-Obama.jpg?w=800&h=450&c=crop"
-    })
-end
+Fuck
 local randomtexts = {
 "Yo, ur noob",
 "This game is trash",
