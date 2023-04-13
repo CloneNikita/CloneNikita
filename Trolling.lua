@@ -5,7 +5,12 @@ local randomtexts = {
 "Never gonna give you up",
 "hello baby Mama's",
 "Yyeyeyeye hohoho",
-"Nice gaming chair"
+"Nice gaming chair",
+"GG, GO NEXT",
+"You died to Trollface, i mean to ur mom",
+"This game sucks man",
+"Take crucifix",
+"UR NOOB YOU ALWAYS JUST DIE!"
 
 }
 function notif(title,desc,rea)
@@ -31,7 +36,7 @@ local Configuration = {
 
 
 }
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Any problems?","Keep look at it."}, "Blue")
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 wait(2.3)
 game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Death.Text = "Died to Eyes"
 EntitySpawner:Spawn("Eyes", Configuration)
