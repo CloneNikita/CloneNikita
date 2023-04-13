@@ -50,9 +50,6 @@ repeat
 wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
 until
-elseif new == 1 then
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Great, go again."}, "Blue")
 end
  end
 end 
