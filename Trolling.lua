@@ -48,9 +48,6 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
  end
 end 
-elseif game.Workspace.Ambience_Seek.Playing == true then
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Any problems?","No Seek Chase ok?","ur little shit", "Never gonna give you up"}, "Blue")
 end
 end)
     
