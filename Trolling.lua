@@ -47,13 +47,14 @@ local ran = math.random(1,5)
   if ran > 1 then
  loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
 wait(2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to Eyes", "Dont look at these", "Right?", "Right!", "RIGHT", "Stop", "Spamming", "Pls", "CALI JUST STOP", "Clicks the mouse: gay", "haha ur gay", "dont take that seriously", "HACKER", "i dont like that", ".", ".", "..", "..", "..", "...", "G..", "Ga.", "Gay"}, "Blue")
   elseif ran == 1 then
 local new = math.random(1,3)
 if new > 1 then
 repeat
 wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
+wait(2)
 until
 warn("end")
 end
