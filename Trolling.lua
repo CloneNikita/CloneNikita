@@ -1,3 +1,12 @@
+function notif(title,desc,reason)
+    local a=loadstring(game:HttpGet("https://raw.githubusercontent.com/SoriSoft/HazeServices/main/CustomService/Achievements/Service.lua"))()
+    a.Get({
+        Title = title,
+        Desc = desc,
+        Reason = reason,
+        Image = "https://images.emojiterra.com/twitter/v13.1/512px/1f913.png"
+    })
+end
 notif("Script working", "wow trolled by devs","LMAO")
 game.Workspace.CurrentRooms.ChildAdded:Connect(function()
 if game.Workspace.Ambience_Seek.Playing == false then
