@@ -1,5 +1,3 @@
-print("colbasa")
-warn("No fucking way if its worked")
 local randomtexts = {
 "Yo, ur noob",
 "This game is trash",
