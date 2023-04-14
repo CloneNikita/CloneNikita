@@ -55,7 +55,7 @@ wait(2.3)
 game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Death.Text = "Died to Eyes"
 EntitySpawner:Spawn("Eyes", Configuration)
 end
-local dot = math.random(1,2)
+local dot = math.random(1,3)
     if dot == 1 then
 local ran = math.random(1,5)
   if ran > 1 then
@@ -82,6 +82,12 @@ wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
 end
+elseif dot == 2 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
+wait(2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
+elseif dot == 3 then
+
 end
 end
 warn("what did i wrong?") 
