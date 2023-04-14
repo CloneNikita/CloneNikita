@@ -1,4 +1,3 @@
-print("its working")
 local randomtexts = {
 "Yo, ur noob",
 "This game is trash",
