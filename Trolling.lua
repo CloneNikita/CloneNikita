@@ -1,4 +1,9 @@
+local e = xd
 print("please")
+print("Hey, is that a joke?")
+print("DONT GIVE ME A NIL ERROR AT FIRST LINE YOU UR GAY")
+print("And all that kreekcraft said")
+print("please dont do that")
 local randomtexts = {
 "Yo, ur noob",
 "This game is trash",
@@ -100,11 +105,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNiki
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
-end
 print("good doing")
 end
 warn("please work please god PLS GOD")
 end
+warn("work pls")
 end
 warn("what did i wrong?") 
 end)
