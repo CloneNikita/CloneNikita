@@ -14,21 +14,6 @@ local randomtexts = {
 "You died to Calixos jr",
 "You died to lolcat",
 "You died to Kardin Hong"
-"You have hidden talents 🔥🔥 keep it hidden",
-">v<",
-"this thing sucks ima watch youtube shorts",
-"L",
-"ratio",
-"If there is a hole then there is a goal -Masteroogwgay",
-"this aint doors",
-"👎",
-"You died to heart attack",
-"192.134.5.182",
-"Dont follow your dreams, follow my twitter",
-"Not quite but we upp 💯💯🔥🔥",
-"😭😭😭",
-"💀",
-"Only in ohio 💀💀💀"
 }
 local gonnatexts = {
 "CRUCIFIX FOR NOOBS!",
