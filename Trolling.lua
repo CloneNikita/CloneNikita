@@ -100,7 +100,6 @@ wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
 print("good doing")
-end
 warn("please work please god PLS GOD")
 end
 warn("work pls")
