@@ -65,10 +65,11 @@ wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
   elseif ran == 1 then
 local new = math.random(1,3)
-if new > 1 then
+if new > 2 then
 repeat
 wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
+wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 wait(2)
 until
@@ -76,10 +77,27 @@ warn("end")
 elseif new == 1 then
 game.Players.LocalPlayer.Character.Health = 0
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Cali...", "I wanna say you something.",gonnatexts[math.random(1,#gonnatexts)]}, "Blue")
+elseif new == 2 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
+wait(2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
 end
 end
 end
+elseif game.Workspace.Ambience_Seek.Playing == true then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
+wait(2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Ambush.lua"))()
+wait(2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))()  
+wait(2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Ambush.lua"))() 
+wait(2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 warn("what did i wrong?") 
 end)
     
