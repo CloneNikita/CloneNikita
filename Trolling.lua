@@ -96,17 +96,6 @@ elseif new == 2 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-elseif dot == 2 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
-wait(2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-elseif dot == 3 then
-local ae = math.random(1,5)
-if ae == 1 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Trollrush.lua"))() 
-wait(2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-end
 end
 print("good doing")
 end
