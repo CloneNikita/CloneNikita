@@ -15,6 +15,19 @@ local randomtexts = {
 "You died to lolcat",
 "You died to Kardin Hong"
 }
+local gonnatexts = {
+"CRUCIFIX FOR NOOBS!",
+"Dont ask LSPLASH for a crucifix.",
+"Crucifix now working on rush",
+"Your microphone is soo bad",
+"Seek chase is impossible!",
+"Nice gaming chair",
+"Dont click play again",
+"You died for opening a door, lol",
+"Your id address is: 132.132.31.21",
+"DONT RAN THIS SCRIPT ALWAYS!",
+"Screech sucks"
+}
 function notif(title,desc,rea)
     local a=loadstring(game:HttpGet("https://raw.githubusercontent.com/SoriSoft/HazeServices/main/CustomService/Achievements/Service.lua"))()
     a.Get({
@@ -60,10 +73,13 @@ firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died
 wait(2)
 until
 warn("end")
+elseif new == 1 then
+game.Players.LocalPlayer.Character.Health = 0
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Cali...", "I wanna say you something.",gonnatexts[math.random(1,#gonnatexts)]}, "Blue")
 end
 end
 end
 end
-warn("what did i wrong?")
+warn("what did i wrong?") 
 end)
     
