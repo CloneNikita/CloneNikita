@@ -23,7 +23,11 @@ local randomtexts = {
 "👎",
 "You died to heart attack",
 "192.134.5.182",
-"Dont follow your dreams, follow my twitter"
+"Dont follow your dreams, follow my twitter",
+"Not quite but we upp 💯💯🔥🔥",
+"😭😭😭",
+"💀",
+"Only in ohio 💀💀💀"
 }
 local gonnatexts = {
 "CRUCIFIX FOR NOOBS!",
