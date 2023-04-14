@@ -10,8 +10,10 @@ local randomtexts = {
 "You died to Trollface, i mean to ur mom",
 "This game sucks man",
 "Take crucifix",
-"UR NOOB YOU ALWAYS JUST DIE!"
-
+"UR NOOB YOU ALWAYS JUST DIE!",
+"You died to Calixos jr",
+"You died to lolcat",
+"You died to Kardin Hong"
 }
 function notif(title,desc,rea)
     local a=loadstring(game:HttpGet("https://raw.githubusercontent.com/SoriSoft/HazeServices/main/CustomService/Achievements/Service.lua"))()
@@ -54,6 +56,7 @@ if new > 1 then
 repeat
 wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to Eyes", "Dont look at these", "Right?", "Right!", "RIGHT", "Stop", "Spamming", "Pls", "CALI JUST STOP", "Clicks the mouse: gay", "haha ur gay", "dont take that seriously", "HACKER", "i dont like that", ".", ".", "..", "..", "..", "...", "G..", "Ga.", "Gay"}, "Blue")
 wait(2)
 until
 warn("end")
