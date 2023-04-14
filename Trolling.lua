@@ -1,3 +1,4 @@
+print("its working")
 local randomtexts = {
 "Yo, ur noob",
 "This game is trash",
@@ -95,7 +96,6 @@ elseif new == 2 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-end
 elseif dot == 2 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
 wait(2)
@@ -107,6 +107,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNiki
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
+end
+print("good doing")
 end
 warn("please work please god PLS GOD")
 end
