@@ -1,3 +1,4 @@
+warn("i dare you to work") 
 local randomtexts = {
 "Yo, ur noob",
 "This game is trash",
@@ -99,11 +100,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNiki
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
-print("good doing")
-warn("please work please god PLS GOD")
 end
-warn("work pls")
 end
-warn("what did i wrong?") 
+end
+
 end)
     
