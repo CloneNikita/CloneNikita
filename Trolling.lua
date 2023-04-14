@@ -100,6 +100,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNiki
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
+end
 print("good doing")
 end
 warn("please work please god PLS GOD")
