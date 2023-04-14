@@ -1,3 +1,4 @@
+print("please")
 local randomtexts = {
 "Yo, ur noob",
 "This game is trash",
@@ -29,6 +30,7 @@ local randomtexts = {
 "💀",
 "Only in ohio 💀💀💀"
 }
+print("work")
 local gonnatexts = {
 "CRUCIFIX FOR NOOBS!",
 "Dont ask LSPLASH for a crucifix.",
@@ -42,6 +44,7 @@ local gonnatexts = {
 "DONT RAN THIS SCRIPT ALWAYS!",
 "Screech sucks"
 }
+print("stop")
 function notif(title,desc,rea)
     local a=loadstring(game:HttpGet("https://raw.githubusercontent.com/SoriSoft/HazeServices/main/CustomService/Achievements/Service.lua"))()
     a.Get({
@@ -53,6 +56,7 @@ function notif(title,desc,rea)
 end
 notif("If you see this mean script works", "Thats epic!", "Runeed")
 game.Workspace.CurrentRooms.ChildAdded:Connect(function()
+print("a nil value without any reason")
 if game.Workspace.Ambience_Seek.Playing == false then
   local eyes = math.random(1,1)
 if eyes == 1 then
