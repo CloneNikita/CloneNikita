@@ -86,19 +86,5 @@ end
 end
 end
 warn("what did i wrong?") 
-elseif game.Workspace.Ambience_Seek.Playing == true then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
-wait(2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Ambush.lua"))()
-wait(2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))()  
-wait(2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Ambush.lua"))() 
-wait(2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-
 end)
     
