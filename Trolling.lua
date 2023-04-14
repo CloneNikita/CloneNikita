@@ -1,4 +1,6 @@
-local e = xd
+error("OR YOUR FUCKING GAY AND I WILL DELETE YOU")
+warn("Stop this or i will delete the script. just tell me a error.")
+warn("YOU MAKE ME ANGRY!")
 print("please")
 print("Hey, is that a joke?")
 print("DONT GIVE ME A NIL ERROR AT FIRST LINE YOU UR GAY")
