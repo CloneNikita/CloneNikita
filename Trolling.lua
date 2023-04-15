@@ -18,16 +18,16 @@ local randomtexts = {
 "🗿Go to die"
 }
 local gonnatexts = {
-"CRUCIFIX FOR NOOBS!",
-"Dont ask LSPLASH for a crucifix.",
-"Crucifix now working on rush",
-"Your microphone is soo bad",
-"Seek chase is impossible!",
-"Nice gaming chair",
-"Dont click play again",
-"You died for opening a door, lol",
-"Your id address is: 132.132.31.21",
-"DONT RAN THIS SCRIPT ALWAYS!",
+"Oow",
+"Big L, You stepped on the 💩💩💩",
+"you stepped on the shit",
+"it will be better if that will happend in seek chase",
+"😭",
+"🗿🗿🗿",
+"Shit",
+"Oh Shit, here we go again",
+"oh no, i have my life",
+"Nah, its so sus",
 "Screech sucks"
 }
 function notif(title,desc,rea)
@@ -58,16 +58,16 @@ wait(2.3)
 game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Death.Text = "Died to Eyes"
 EntitySpawner:Spawn("Eyes", Configuration)
 end
-local dot = math.random(1,3)
+local dot = math.random(1,2)
     if dot == 1 then
-local ran = math.random(1,5)
+local ran = math.random(1,2)
   if ran > 1 then
  loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
   elseif ran == 1 then
-local new = math.random(1,3)
-if new > 2 then
+local new = math.random(1,10)
+if new > 5 then
 repeat
 wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))() 
@@ -77,23 +77,32 @@ wait(2)
 until
 warn("end")
 elseif new == 1 then
-game.Players.LocalPlayer.Character.Health = 0
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Cali...", "I wanna say you something.",gonnatexts[math.random(1,#gonnatexts)]}, "Blue")
+game.Players.LocalPlayer.Character.WalkSpeed = 0
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent, 'Now your ded, i spawn a troll',true,5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Broll.lua"))() 
+wait(10)
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent, 'Hahaha, i scammed you ur still alive.',true,5)
+game.Players.LocalPlayer.Character.WalkSpeed = 0
 elseif new == 2 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-elseif dot == 2 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Rush.lua"))() 
-wait(2)
+elseif new == 3 then
+game.Players.LocalPlayer.Character.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.Health -= 30
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,gonnatexts[math.random(1,#gonnatexts)],true,5)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-elseif dot == 3 then
-local ae = math.random(1,5)
-if ae == 1 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Trollrush.lua"))() 
-wait(2)
+wait(3)
+game.Players.LocalPlayer.Character.WalkSpeed = 16
+elseif new == 4 then
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,"Nothing happend...",true,5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))()
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
-end
+elseif new == 5 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))()
+wait(10)
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,"dude dont hide itz 100% safe",true,5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNikita/main/Troll.lua"))()
 end
 end
 end
