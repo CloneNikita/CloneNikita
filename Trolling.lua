@@ -43,6 +43,19 @@ local gonnatexts = {
 "DONT RAN THIS SCRIPT ALWAYS!",
 "Screech sucks"
 }
+local steppedtexts = {
+"You stepped on the 💩",
+"Ow i hate snare",
+"💀",
+"L + ratio",
+"You stepped on the 🤡 the killer",
+"Xd",
+"Hahaha",
+"😭😭😭",
+"🗿🗿🗿",
+"Psst",
+"Big L if u die"
+}
 function notif(title,desc,rea)
     local a=loadstring(game:HttpGet("https://raw.githubusercontent.com/SoriSoft/HazeServices/main/CustomService/Achievements/Service.lua"))()
     a.Get({
@@ -71,7 +84,7 @@ wait(2.3)
 game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Death.Text = "Died to Eyes"
 EntitySpawner:Spawn("Eyes", Configuration)
 end
-local dot = math.random(1,2)
+local dot = math.random(1,5)
     if dot == 1 then
 local ran = math.random(1,5)
   if ran > 1 then
@@ -107,6 +120,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CloneNikita/CloneNiki
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
 end
+elseif dot == 4 then
+game.Players.LocalPlayer.Character.Humanoid.Health -= 10
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,steppedtexts[math.random(1, #steppedtexts)],true,5)
+wait(2)
+firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
+elseif dot == 5 then
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,"Pro tip: "..gonnatexts[math.random(1, #gonnatexts)],true,5)
 end
 end
 end
