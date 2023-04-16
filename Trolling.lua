@@ -66,7 +66,7 @@ local ran = math.random(1,2)
 wait(2)
 firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {randomtexts[math.random(1,#randomtexts)]}, "Blue")
   elseif ran == 1 then
-local new = math.random(1,10)
+local new = math.random(1,6)
 if new > 5 then
 repeat
 wait(5)
