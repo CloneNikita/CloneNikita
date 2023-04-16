@@ -25,36 +25,32 @@ local entity = Creator.createEntity({
         200, -- Shake start distance (from Entity to you)
     },
     Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
+        true, -- Enabled ('false' if you don't want jumpscare)
         {
-            Image1 = "rbxassetid://11442031143", -- Image1 url
-            Image2 = "rbxassetid://11442031143", -- Image2 url
+            Image1 = "rbxassetid://6862780932", -- Image1 url
+            Image2 = "rbxassetid://6862780932", -- Image2 url
             Shake = true,
             Sound1 = {
-                7616380887, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
+               4910368846, -- SoundId
+                { Volume = 1 }, -- Sound properties
             },
             Sound2 = {
-                6832470734, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
+                5289832659, -- SoundId
+                { Volume = 2 }, -- Sound properties
             },
             Flashing = {
                 true, -- Enabled
-                Color3.fromRGB(136, 0, 255), -- Color
+                Color3.fromRGB(255, 255, 255), -- Color
             },
             Tease = {
                 true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
+                Min = 4,
+                Max = 4,
             },
         },
     },
     CustomDialog = {"Uhh...", "Alright."}
 })
-
 -- Run the created entity
-entity.Debug.OnDeath = function(entityTable)
-    wait(1.2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Uhh..", "Alright."}, "Blue")
-end
+   
 Creator.runEntity(entity)
