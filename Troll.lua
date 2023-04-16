@@ -25,10 +25,10 @@ local entity = Creator.createEntity({
         200, -- Shake start distance (from Entity to you)
     },
     Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
+        true, -- Enabled ('false' if you don't want jumpscare)
         {
-            Image1 = "rbxassetid://11442031143", -- Image1 url
-            Image2 = "rbxassetid://11442031143", -- Image2 url
+            Image1 = "rbxassetid://6862780932", -- Image1 url
+            Image2 = "rbxassetid://12983135409", -- Image2 url
             Shake = true,
             Sound1 = {
                 7616380887, -- SoundId
@@ -45,7 +45,7 @@ local entity = Creator.createEntity({
             Tease = {
                 true, -- Enabled ('false' if you don't want tease)
                 Min = 1,
-                Max = 3,
+                Max = 1,
             },
         },
     },
@@ -54,7 +54,5 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 entity.Debug.OnDeath = function(entityTable)
-    wait(1.2)
-firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"Uhh..", "Alright."}, "Blue")
-end
+   
 Creator.runEntity(entity)
