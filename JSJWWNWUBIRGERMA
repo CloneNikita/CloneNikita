@@ -1,6 +1,6 @@
 -- Moveable Work At Moblie/PC 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Fnf Remix", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Fnf Remix 1.2 (BETA)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local AutoPlayer = false
 local beingtrash = false
 local HITCHANCE = 10
