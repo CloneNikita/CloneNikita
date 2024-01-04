@@ -8,6 +8,9 @@ local HITSECONDS = 8
 local MINHITSECONDS = 2
 local LBOZO = false
 local NoteTiles = false
+local AutoGG = false
+local AutoToxic = false
+local ToxicMessages = {"soo ez", "your soo bad", "ez", "SOO EZ", "get better nub", "blud is bad 😂😂😂"}
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = title;
@@ -29,6 +32,32 @@ local toggle = Tab:AddToggle({
 		
 	end    
 })
+
+local Tab3 = Window:MakeTab({
+	Name = "Chat",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab3:AddToggle({
+	Name = "Auto GG",
+	Default = false,
+	Callback = function(Value)
+		AutoGG = Value
+	end    
+})
+Tab3:AddToggle({
+	Name = "Auto Toxic",
+	Default = false,
+	Callback = function(Value)
+		AutoToxic = Value
+	end    
+})
+local Tab2 = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab2:AddLabel("Credits: russianrandomguy for the script")
 local toggle = Tab:AddToggle({
 	Name = "Auto Click Mobile Tiles",
 	Default = false,
@@ -43,6 +72,14 @@ local toggle2 = Tab:AddToggle({
 	Callback = function(Value)
 	
           beingtrash = Value
+          
+	end  
+})
+Tab:AddToggle({
+	Name = "Legit Mode Chance To Click Random Key When Miss.",
+	Default = false,
+	Callback = function(Value)
+          LBOZO = Value
           
 	end  
 })
@@ -63,7 +100,7 @@ Tab:AddSlider({
 	Name = "Min Legit Mode Accurate (Lower = More Accurate)",
 	Min = 2,
 	Max = 10,
-	Default = 4,
+	Default = 2,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "Accurate",
@@ -76,7 +113,7 @@ Tab:AddSlider({
 	Name = "Max Legit Mode Accurate (Lower = More Accurate)",
 	Min = 2,
 	Max = 10,
-	Default = 4,
+	Default = 8,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "Accurate",
@@ -85,14 +122,8 @@ Tab:AddSlider({
 	end    
 	
 })
-Tab:AddToggle({
-	Name = "Legit Mode Chance To Click Random Key When Miss.",
-	Default = false,
-	Callback = function(Value)
-          LBOZO = Value
-          
-	end  
-})
+
+
 local function holdshit(mobile,toggle)
 local button = game.Players.LocalPlayer.PlayerGui.Main.MatchFrame.MobileKeys:FindFirstChild(mobile)
 if toggle == true and NoteTiles == true then
@@ -101,6 +132,7 @@ else
 button.ImageTransparency = 0.8
 end
 end
+
 local function sus(e)
 
 		local vim = game:GetService("VirtualInputManager")
@@ -109,14 +141,42 @@ local function sus(e)
 		local main = plr.PlayerGui.Main
         local mobilekeys = main.MatchFrame.MobileKeys
 		
-		
+		spawn(function()
+		while task.wait() do
+           if AutoToxic == true and Player ~= 0 then
+              task.wait(math.random(15,25))
+              local randommsg = ToxicMessages[math.random(1,#ToxicMessages)]
+              if AutoToxic == true and Player ~= 0 then
+                 game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(randommsg, "All")
+              end
+           end
+        end
+		end)
 		local Player = 1
+		spawn(function()
 		
+		local fuck = nil	    
+		   fuck = plr.File.CurrentPlayer:GetPropertyChangedSignal("Value"):Connect(function(e)
+		    if plr.Character.Humanoid.Health == 0 then
+		      fuck:Disconnect()
+		    end
+		    task.wait(math.random(0.5,1))
+            if Player == 0 and AutoGG == true and AutoToxic == false then
+
+           game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("gg", "All")
+
+	        
+	        elseif Player == 0 and AutoGG == true and AutoToxic == true then
+	        game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("i won bozo soo ez", "All")
+	end
+		    end)
+		end)
 		spawn(function()
 			while task.wait() do
 			if plr.Character.Humanoid.Health == 0 then
 			    break
 		    end
+		    
 				if AutoPlayer then
 				
 					if plr.File.CurrentPlayer.Value then
