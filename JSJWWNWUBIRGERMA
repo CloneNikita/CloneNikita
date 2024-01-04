@@ -6,6 +6,7 @@ local beingtrash = false
 local HITCHANCE = 10
 local HITSECONDS = 8
 local MINHITSECONDS = 2
+local AmountToSpam = 2
 local LBOZO = false
 local NoteTiles = false
 local AutoGG = false
@@ -92,7 +93,7 @@ Tab:AddSlider({
 	Increment = 1,
 	ValueName = "Chance",
 	Callback = function(Value)
-		HITCHANCE = Value
+		AmountToSpam = Value
 	end    
 	
 })
@@ -122,6 +123,7 @@ Tab:AddSlider({
 	end    
 	
 })
+
 
 
 local function holdshit(mobile,toggle)
@@ -216,8 +218,10 @@ local function sus(e)
 								
                                 	table.insert(tyingarrow,v)
                                     local rand = math.random(1,HITCHANCE + 2)
-									if rand ~= 1 and 2 then
-									
+									if rand ~= 1 and 2 and #tyingarrow < AmountToSpam then 
+									if MINHITSECONDS > HITSECONDS then
+								    MINHITSECONDS = HITSECONDS
+								    end
 									task.wait(math.random(MINHITSECONDS,HITSECONDS)/250)
 									vim:SendKeyEvent(1,Enum.KeyCode[keke],0,nil)
 									holdshit(mobile,true)
@@ -231,8 +235,9 @@ local function sus(e)
 									task.wait(math.random(0.05,0.08))
 									holdshit(mobile,false)
 									vim:SendKeyEvent(0,Enum.KeyCode[kely],0,nil) 
-									
+								
 									end
+									
 									
 									else
 									table.insert(tyingarrow,v)
