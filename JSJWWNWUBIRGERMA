@@ -6,6 +6,7 @@ local beingtrash = false
 local HITCHANCE = 10
 local HITSECONDS = 8
 local MINHITSECONDS = 2
+local LBOZO = false
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = title;
@@ -21,17 +22,19 @@ local Tab = Window:MakeTab({
 local toggle = Tab:AddToggle({
 	Name = "AutoPlayer",
 	Default = false,
+	Flag = "toggle",
 	Callback = function(Value)
 		AutoPlayer = Value
 		
 	end    
 })
 local toggle2 = Tab:AddToggle({
-	Name = "Legit Mode",
+	Name = "Legit Mode (AutoPlayer Must Be Enabled)",
 	Default = false,
 	Callback = function(Value)
-		beingtrash = Value
-		
+	
+          beingtrash = Value
+          
 	end  
 })
 Tab:AddSlider({
@@ -73,7 +76,14 @@ Tab:AddSlider({
 	end    
 	
 })
-
+Tab:AddToggle({
+	Name = "Legit Mode Chance To Click Random Key When Miss.",
+	Default = false,
+	Callback = function(Value)
+          LBOZO = Value
+          
+	end  
+})
 local function holdshit(mobile,toggle)
 local button = game.Players.LocalPlayer.PlayerGui.Main.MatchFrame.MobileKeys:FindFirstChild(mobile)
 if toggle == true then
@@ -142,7 +152,7 @@ local function sus(e)
 									task.wait(math.random(MINHITSECONDS,HITSECONDS)/250)
 									vim:SendKeyEvent(1,Enum.KeyCode[keke],0,nil)
 									holdshit(mobile,true)
-									elseif rand == 1 then
+									elseif rand == 1 and LBOZO == true then
 									randomtable = {"A","S","W","D"}
 									table.remove(randomtable, num)
 									local kely = randomtable[math.random(1,#randomtable)]
