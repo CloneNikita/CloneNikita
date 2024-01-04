@@ -1,10 +1,11 @@
-
+-- Moveable Work At Moblie/PC 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Fnf Remix", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local AutoPlayer = false
 local beingtrash = false
 local HITCHANCE = 10
-local HITSECONDS = 5
+local HITSECONDS = 8
+local MINHITSECONDS = 2
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = title;
@@ -47,9 +48,22 @@ Tab:AddSlider({
 	
 })
 Tab:AddSlider({
-	Name = "Legit Mode Accurate (Lower = More Accurate)",
+	Name = "Min Legit Mode Accurate (Lower = More Accurate)",
 	Min = 2,
-	Max = 16,
+	Max = 10,
+	Default = 4,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Accurate",
+	Callback = function(Value)
+		MINHITSECONDS = Value
+	end    
+	
+})
+Tab:AddSlider({
+	Name = "Max Legit Mode Accurate (Lower = More Accurate)",
+	Min = 2,
+	Max = 10,
 	Default = 4,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
@@ -125,17 +139,17 @@ local function sus(e)
                                     local rand = math.random(1,HITCHANCE + 2)
 									if rand ~= 1 and 2 then
 									
-									task.wait(math.random(HITSECONDS/2,HITSECONDS)/500)
+									task.wait(math.random(MINHITSECONDS,HITSECONDS)/250)
 									vim:SendKeyEvent(1,Enum.KeyCode[keke],0,nil)
 									holdshit(mobile,true)
 									elseif rand == 1 then
 									randomtable = {"A","S","W","D"}
-									
-									local kely = randomtable[math.random(1,4)]
+									table.remove(randomtable, num)
+									local kely = randomtable[math.random(1,#randomtable)]
 									
 									vim:SendKeyEvent(1,Enum.KeyCode[kely],0,nil) 
 									holdshit(mobile,true)
-									wait(math.random(0.05,0.08))
+									task.wait(math.random(0.05,0.08))
 									holdshit(mobile,false)
 									vim:SendKeyEvent(0,Enum.KeyCode[kely],0,nil) 
 									
