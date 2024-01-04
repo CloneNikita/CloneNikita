@@ -7,6 +7,7 @@ local HITCHANCE = 10
 local HITSECONDS = 8
 local MINHITSECONDS = 2
 local LBOZO = false
+local NoteTiles = false
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = title;
@@ -25,6 +26,14 @@ local toggle = Tab:AddToggle({
 	Flag = "toggle",
 	Callback = function(Value)
 		AutoPlayer = Value
+		
+	end    
+})
+local toggle = Tab:AddToggle({
+	Name = "Auto Click Mobile Tiles",
+	Default = false,
+	Callback = function(Value)
+		NoteTiles = Value
 		
 	end    
 })
@@ -86,7 +95,7 @@ Tab:AddToggle({
 })
 local function holdshit(mobile,toggle)
 local button = game.Players.LocalPlayer.PlayerGui.Main.MatchFrame.MobileKeys:FindFirstChild(mobile)
-if toggle == true then
+if toggle == true and NoteTiles == true then
 button.ImageTransparency = 0
 else
 button.ImageTransparency = 0.8
