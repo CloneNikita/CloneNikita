@@ -10,8 +10,11 @@ local MINHITSECONDS = 2
 local AmountToSpam = 2
 local LBOZO = false
 local NoteTiles = false
+local anticheatkick = 2665
+local numer = 0
 local AutoGG = false
 local AutoToxic = false
+local anticheatmessages = {"[HAC 1.1] Suspected Virtual Player", "[HAC 1.1] Anticheat Virtual Player spoofer Attempt.", "[HAC 1.1] Keyboard Clicks on Mobile Device."}
 local ToxicMessages = {"soo ez", "your soo bad", "ez", "SOO EZ", "get better nub", "blud is bad ez"}
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -65,6 +68,7 @@ local Tab4 = Window:MakeTab({
 	PremiumOnly = false
 })
 Tab4:AddLabel("+ Fixed Hold Arrows Double Tap")
+Tab4:AddLabel("+ Fully Bypassed Anticheat")
 Tab2:AddLabel("Credits: russianrandomguy for the script")
 local toggle = Tab:AddToggle({
 	Name = "Interact Mobile Tiles",
@@ -270,7 +274,7 @@ local function sus(e)
 										vim:SendKeyEvent(0,Enum.KeyCode[keke],0,nil) 
 										table.remove(tyingarrow,i)
 										numer += 1
-										
+							
 									end)
 								end
 							end
