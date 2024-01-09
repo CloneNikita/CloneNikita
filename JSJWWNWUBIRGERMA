@@ -1,7 +1,7 @@
 -- Moveable Work At Moblie/PC 
 if game.PlaceId ~= 6520999642 then return end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Fnf Remix 1.3 (BETA)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Fnf Remix 1.35 (BETA)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local AutoPlayer = false
 local beingtrash = false
 local HITCHANCE = 10
@@ -12,7 +12,7 @@ local LBOZO = false
 local NoteTiles = false
 local AutoGG = false
 local AutoToxic = false
-local ToxicMessages = {"soo ez", "your soo bad", "ez", "SOO EZ", "get better nub", "blud is bad ðŸ˜‚ðŸ˜‚ðŸ˜‚"}
+local ToxicMessages = {"soo ez", "your soo bad", "ez", "SOO EZ", "get better nub", "blud is bad ez"}
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = title;
@@ -64,8 +64,7 @@ local Tab4 = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab4:AddLabel("+ Fixed Auto Legit")
-Tab4:AddLabel("+ Fixed Auto Toxic")
+Tab4:AddLabel("+ Fixed Hold Arrows Double Tap")
 Tab2:AddLabel("Credits: russianrandomguy for the script")
 local toggle = Tab:AddToggle({
 	Name = "Interact Mobile Tiles",
@@ -204,7 +203,7 @@ local function sus(e)
 		
 		function lol(num,keke,mobile)
 			local antilag = 0
-			local speed = 0.02
+			local speed = 0.05
 			
 			local tyingarrow = {}
 			while true do
@@ -255,7 +254,7 @@ local function sus(e)
 									spawn(function()
 										local hold = main.MatchFrame["KeySync".. Player]["Arrow".. num].Hold.Hitbox:WaitForChild(v.Name,0.1)
 										local antilag2 = 0
-										if hold and hold.Size.Y.Scale > 0 then
+										if hold and hold.Size.Y.Scale - 0.5 > 0 then
 											repeat 
 												antilag += 1
 												if antilag >= 10 then
@@ -265,11 +264,13 @@ local function sus(e)
 												if not hold then 
 													break 
 												end 
-											until hold.Position.Y.Scale+hold.Size.Y.Scale <= speed
+											until hold.Position.Y.Scale+hold.Size.Y.Scale - 0.5 <= speed
 										end
 										holdshit(mobile,false)
 										vim:SendKeyEvent(0,Enum.KeyCode[keke],0,nil) 
 										table.remove(tyingarrow,i)
+										numer += 1
+										
 									end)
 								end
 							end
@@ -303,4 +304,5 @@ local function sus(e)
 	end)
 	message("FNF Remix AutoPlayer Legit And OP", "Credits: Random Russian Guy", 10)
 	OrionLib:Init()
+	
 	
