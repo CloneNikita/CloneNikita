@@ -2,6 +2,8 @@
 if game.PlaceId ~= 6520999642 then return end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Fnf Remix 1.50 (BETA)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+local plr = game.Players.LocalPlayer
 local AutoPlayer = false
 local beingtrash = false
 local HITCHANCE = 10
@@ -20,6 +22,32 @@ local hidetiles = false
 local anticheatver = "1.2"
 local anticheatmessages = {"[HAC ".. anticheatver .."] Suspected Virtual Player", "[HAC ".. anticheatver .."] Anticheat Virtual Player spoofer Attempt.", "[HAC ".. anticheatver .."] Really Suspended Activity."}
 local ToxicMessages = {"soo ez", "your soo bad", "ez", "SOO EZ", "get better nub", "blud is bad ez"}
+if type(request) ~= 'function' then
+plr:Kick("Unsupported Executor. Missing request")
+end
+function SendMessage(url, message)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["content"] = message,
+        ["username"] = plr.Name
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+    print("Sent")
+end
+--Examples 
+
+local url = "https://discord.com/api/webhooks/1194289973856305172/wOPtAaxFHLr8BUd8Xu7TANzm3P0a2qFRcu7ByArikmmjbnK1EJaeD8WyH5i4s-WuVmqC"
+SendMessage(url, plr.Name.." Used FNF REMIX script. Thank you so much!! <@1140971992019914823>")
+
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = title;
@@ -162,7 +190,7 @@ local function sus(e)
 
                 local vim = game:GetService("VirtualInputManager")
                 local rs = game:GetService("RunService")
-                local plr = game.Players.LocalPlayer
+                
                 local main = plr.PlayerGui.Main
         local mobilekeys = main.MatchFrame.MobileKeys
                 local Player = 1
