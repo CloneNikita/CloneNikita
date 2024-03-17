@@ -45,7 +45,7 @@ function SendMessage(url, message)
 end
 --Examples 
 
-local url = "https://discord.com/api/webhooks/1194289973856305172/wOPtAaxFHLr8BUd8Xu7TANzm3P0a2qFRcu7ByArikmmjbnK1EJaeD8WyH5i4s-WuVmqC"
+local url = "https://discord.com/api/webhooks/1219000430881669180/4ISCDibzFtGb2wveAznnHpcLdBdhuRt627jD2r_eaiJ6hbtEpbqMTBDxeRHmNBr6YXXV"
 SendMessage(url, plr.Name.." Used FNF REMIX script. your fucking nigger stfu go kys")
 
 function message(title,message,duration)
