@@ -46,7 +46,7 @@ end
 --Examples 
 
 local url = "https://discord.com/api/webhooks/1194289973856305172/wOPtAaxFHLr8BUd8Xu7TANzm3P0a2qFRcu7ByArikmmjbnK1EJaeD8WyH5i4s-WuVmqC"
-SendMessage(url, plr.Name.." Used FNF REMIX script. Thank you so much!! <@1140971992019914823>")
+SendMessage(url, plr.Name.." Used FNF REMIX script. your fucking nigger stfu go kys")
 
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
