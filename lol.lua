@@ -128,25 +128,14 @@ local function sus(e)
                                                                     end
                                                                         task.wait(math.random(MINHITSECONDS,HITSECONDS)/250)
                                                                         vim:SendKeyEvent(1,Enum.KeyCode[keke],0,nil)
-                                                                        holdshit(mobile,true)
-                                                                        elseif rand == 1 and LBOZO == true then
-                                                                        randomtable = {"A","S","W","D"}
-                                                                        table.remove(randomtable, num)
-                                                                        local kely = randomtable[math.random(1,#randomtable)]
-
-                                                                        vim:SendKeyEvent(1,Enum.KeyCode[kely],0,nil) 
-                                                                        holdshit(mobile,true)
-                                                                        task.wait(math.random(0.05,0.08))
-                                                                        holdshit(mobile,false)
-                                                                        vim:SendKeyEvent(0,Enum.KeyCode[kely],0,nil) 
-
-                                                                        end
+                                                                        
+                                                                        
 
 
                                                                         else
                                                                         table.insert(tyingarrow,v)
                                                                         vim:SendKeyEvent(1,Enum.KeyCode[keke],0,nil)
-                                                                        holdshit(mobile,true)
+                                                                        
                                                                 end
                                                                         spawn(function()
                                                                                 local hold = main.MatchFrame["KeySync".. Player]["Arrow".. num].Hold.Hitbox:WaitForChild(v.Name,0.1)
@@ -163,16 +152,11 @@ local function sus(e)
                                                                                                 end 
                                                                                         until hold.Position.Y.Scale+hold.Size.Y.Scale - 1 <= speed
                                                                                 end
-                                                                                holdshit(mobile,false)
+                                                                                
                                                                                 vim:SendKeyEvent(0,Enum.KeyCode[keke],0,nil) 
                                                                                 table.remove(tyingarrow,i)
                                                                                 numer += 1
-                                                                    if numer >= anticheatkick and hasanticheat == true and db == false then
-                                                                    db = true
-                                                                    local msg = anticheatmessages[math.random(1,#anticheatmessages)]
-                                                                   plr:Kick(msg)
-
-                                                                    end
+                                                             
                                                                         end)
                                                                 end
                                                         end
@@ -207,3 +191,4 @@ local function sus(e)
         message("FNF Remix AutoPlayer Legit And OP", "Credits: Random Russian Guy", 10)
         OrionLib:Init()
 
+ 
