@@ -22,31 +22,6 @@ local hidetiles = false
 local anticheatver = "1.3"
 local anticheatmessages = {"[HAC ".. anticheatver .."] Suspected Virtual Player", "[HAC ".. anticheatver .."] Anticheat Virtual Player spoofer Attempt.", "[HAC ".. anticheatver .."] Really Suspended Activity."}
 local ToxicMessages = {"soo ez", "your soo bad", "ez", "SOO EZ", "get better nub", "blud is bad ez"}
-if type(request) ~= 'function' then
-plr:Kick("Unsupported Executor. Missing request")
-end
-function SendMessage(url, message)
-    local http = game:GetService("HttpService")
-    local headers = {
-        ["Content-Type"] = "application/json"
-    }
-    local data = {
-        ["content"] = message,
-        ["username"] = plr.Name
-    }
-    local body = http:JSONEncode(data)
-    local response = request({
-        Url = url,
-        Method = "POST",
-        Headers = headers,
-        Body = body
-    })
-    print("Sent")
-end
---Examples 
-
-local url = "https://discord.com/api/webhooks/1219000430881669180/4ISCDibzFtGb2wveAznnHpcLdBdhuRt627jD2r_eaiJ6hbtEpbqMTBDxeRHmNBr6YXXV"
-SendMessage(url, plr.Name.." Used FNF REMIX script. your fucking nigger stfu go kys")
 
 function message(title,message,duration)
 game:GetService("StarterGui"):SetCore("SendNotification", {
