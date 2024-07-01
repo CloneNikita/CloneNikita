@@ -2,7 +2,7 @@
 if game.PlaceId ~= 6520999642 then return end
 
 local plr = game.Players.LocalPlayer
-local AutoPlayer = false
+local AutoPlayer = true
 local beingtrash = false
 local HITCHANCE = 10
 local HITSECONDS = 8
